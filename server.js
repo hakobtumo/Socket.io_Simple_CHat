@@ -20,6 +20,6 @@ io.on('connection', function (socket) {
     });
     socket.on("karam jnjem?", function () {
         messages = [];
-        io.sockets.emit("de jnjeq dzer messagenery!");
+        // io.sockets.emit("de jnjeq dzer messagenery!");
     });
 });

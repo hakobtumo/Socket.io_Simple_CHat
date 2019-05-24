@@ -3,8 +3,8 @@ function main() {
     var chatDiv = document.getElementById('chat');
     var input = document.getElementById('message');
     var button = document.getElementById('submit');
-    var buttonDelete=document.getElementById('delete');
- 
+    var buttonDelete = document.getElementById('delete');
+
     function handleSubmit(evt) {
         var val = input.value;
         if (val != "") {
@@ -18,18 +18,18 @@ function main() {
         p.innerText = msg;
         chatDiv.appendChild(p);
         input.value = "";
-
-    function buttonDel() {
-        socket.emit("karam jnjem?");
+    }
+        function buttonDel() {
+            socket.emit("karam jnjem?");
+            while(chatDiv.lastElementChild.innerHTML != 'Delete'){
+                chatDiv.removeChild(chatDiv.lastElementChild)
+            }
+        //    while(chatDiv.lastChild!=)
+       
     }
     buttonDelete.onclick = buttonDel;
-}
-
-socket.on('display message', function(){
-    //var x = document.getElementsByTagName("LI");
-    //removeElement(elementId)
-});
-socket.on("de jnjeq dzer messagenery!", deleteMessages);
+    socket.on('display message', handleMessage);
+    //socket.on("de jnjeq dzer messagenery!", deleteMessages);
 } // main closing bracket
 
 window.onload = main;

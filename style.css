@@ -21,6 +21,8 @@ body {
 }
 
 #submit {
+    margin-left:40px;
+    margin-top:10px;
     width: 175px;
     height: 50px;
     border-radius: 0;
